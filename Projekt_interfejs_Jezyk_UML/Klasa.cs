@@ -13,7 +13,6 @@ namespace Projekt_interfejs_Jezyk_UML
             set { iloscUczniow = value; }
         }
 
-
         private int numerKlasy;
         public int  NumerKlasy
         {
