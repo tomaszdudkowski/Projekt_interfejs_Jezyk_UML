@@ -50,7 +50,7 @@ namespace Projekt_interfejs_Jezyk_UML
         {
             foreach (var uczen in listaUczniow)
             {
-                if (uczen.GetKlasa.NumerKlasy == numerKlasy)
+                if (uczen.Klasa.NumerKlasy == numerKlasy)
                 {
                     listaUczniow.Remove(uczen);
                 }
