@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projekt_interfejs_Jezyk_UML
 {
-    class Klasa
+    public class Klasa
     {
         private int iloscUczniow;
         public int IloscUczniow

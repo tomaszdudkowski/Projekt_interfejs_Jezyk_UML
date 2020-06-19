@@ -10,8 +10,8 @@
         <TabControl>
             <TabItem Header="Zarządzaj szkołą">
                 <Grid Background="#FFF" Width="953" Height="498.08">
-                    <Button Content="Dodaj klasę" HorizontalAlignment="Left" Margin="132,45,0,0" VerticalAlignment="Top" Width="73"/>
-                    <Button Content="Usuń klasę" HorizontalAlignment="Left" Margin="132,70,0,0" VerticalAlignment="Top" Width="73"/>
+                    <Button Content="Dodaj klasę" HorizontalAlignment="Left" Margin="132,45,0,0" VerticalAlignment="Top" Width="73" Click="Button_Click"/>
+                    <Button Content="Usuń klasę" HorizontalAlignment="Left" Margin="132,70,0,0" VerticalAlignment="Top" Width="73" Click="Button_Click_1"/>
                     <Label Content="Szkoła" HorizontalAlignment="Left" Margin="147,14,0,0" VerticalAlignment="Top"/>
                     <Label Content="Dyrektor" HorizontalAlignment="Left" Margin="420,13,0,0" VerticalAlignment="Top"/>
                     <RichTextBox Margin="349,44,406,305" Width="198" Height="149.08">
@@ -33,6 +33,7 @@
                     <Label Content="Wicedyrektor" HorizontalAlignment="Left" Margin="714,21,0,0" VerticalAlignment="Top"/>
                     <Button Content="Utwórz zastępstwo" HorizontalAlignment="Left" Margin="698,65,0,0" VerticalAlignment="Top" Width="130"/>
                     <Button Content="Stwórz plan zajęć" HorizontalAlignment="Left" Margin="698,106,0,0" VerticalAlignment="Top" Width="130"/>
+                    <Label x:Name="iloscKlasLabel" Content="Ilość klas:" HorizontalAlignment="Left" Margin="114,119,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Zarządzaj klasami">
@@ -41,7 +42,7 @@
                     <Label Content="Wybierz klasę" HorizontalAlignment="Left" Margin="102,38,0,0" VerticalAlignment="Top"/>
                     <Button Content="Dodaj ucznia" HorizontalAlignment="Left" Margin="83,160,0,0" VerticalAlignment="Top" Width="120"/>
                     <Button Content="Usuń ucznia" HorizontalAlignment="Left" Margin="83,193,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Obsługa uczniów" HorizontalAlignment="Left" Margin="93,129,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Obsługa uczniów klasy" HorizontalAlignment="Left" Margin="78,129,0,0" VerticalAlignment="Top"/>
                     <ListBox Margin="306,69,438,226"/>
                     <Label Content="Lista uczniów" HorizontalAlignment="Left" Margin="370,38,0,0" VerticalAlignment="Top"/>
                     <Label Content="Ilość uczniów w klasie:" HorizontalAlignment="Left" Margin="594,69,0,0" VerticalAlignment="Top"/>
@@ -50,17 +51,38 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Zarządzaj nauczycielami">
-                <Grid Background="#FFF"/>
+            <TabItem Header="Nauczyciele">
+                <Grid Background="#FFF">
+                    <Label Content="Zarządzaj nauczycielami" HorizontalAlignment="Left" Margin="55,33,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Dodaj nauczyciela" HorizontalAlignment="Left" Margin="65,76,0,0" VerticalAlignment="Top" Width="117"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="280,70,0,0" VerticalAlignment="Top" Width="171"/>
+                    <Label Content="Wybierz nauczyciela" HorizontalAlignment="Left" Margin="307,32,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Panel nauczyciela" HorizontalAlignment="Left" Margin="280,111,0,0" VerticalAlignment="Top" Width="171" Height="32"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Zarządzaj uczniami">
-                <Grid Background="#FFF"/>
+                <Grid Background="#FFF">
+                    <ComboBox HorizontalAlignment="Left" Margin="78,51,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Wybierz klasę" HorizontalAlignment="Left" Margin="97,25,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="308,51,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Wybierz ucznia" HorizontalAlignment="Left" Margin="323,25,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Edytuj ucznia" HorizontalAlignment="Left" Margin="312,106,0,0" VerticalAlignment="Top" Width="112" Height="36"/>
+                </Grid>
             </TabItem>
             <TabItem Header="System wirtualnego dziennika">
-                <Grid Background="#FFF"/>
+                <Grid Background="#FFF">
+                    <ComboBox HorizontalAlignment="Left" Margin="78,51,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Wybierz klasę" HorizontalAlignment="Left" Margin="97,25,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="308,51,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Wybierz ucznia" HorizontalAlignment="Left" Margin="323,25,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Panel ocen" HorizontalAlignment="Left" Margin="312,106,0,0" VerticalAlignment="Top" Width="112" Height="36"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Zarządzaj pracownikami szkoły">
-                <Grid Background="#FFF"/>
+                <Grid Background="#FFF">
+                    <Button Content="Panel pracownika administracji" HorizontalAlignment="Left" Margin="197,190,0,0" VerticalAlignment="Top" Height="44" Width="190"/>
+                    <Button Content="Panel pracownika socjalnego" HorizontalAlignment="Left" Margin="528,190,0,0" VerticalAlignment="Top" Height="44" Width="190"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>

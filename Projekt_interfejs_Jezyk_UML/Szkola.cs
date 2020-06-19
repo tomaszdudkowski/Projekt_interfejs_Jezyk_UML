@@ -4,9 +4,17 @@ using System.Text;
 
 namespace Projekt_interfejs_Jezyk_UML
 {
-    class Szkola
+    public class Szkola
     {
         private List<Klasa> listaKlas = new List<Klasa>();
+
+        public List<Klasa> ListaKlas
+        {
+            get
+            {
+                return listaKlas;
+            }
+        }
 
         /// <summary>
         /// Properties Stan Szkoły
@@ -28,7 +36,7 @@ namespace Projekt_interfejs_Jezyk_UML
         /// <summary>
         /// Properties Ilość Klas
         /// </summary>
-        private int iloscKlas;
+        static private int iloscKlas;
         public int IloscKlas { 
             get
             {
@@ -63,6 +71,7 @@ namespace Projekt_interfejs_Jezyk_UML
                 if(klasa.NumerKlasy == numerKlasy)
                 {
                     listaKlas.Remove(klasa);
+                    break;
                 }
             }
             IloscKlas -= 1;

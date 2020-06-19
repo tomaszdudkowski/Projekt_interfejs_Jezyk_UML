@@ -20,9 +20,27 @@ namespace Projekt_interfejs_Jezyk_UML
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Szkola szkola = new Szkola();
         public MainWindow()
         {
             InitializeComponent();
+            szkola.IloscKlas = 0;
+            string iloscKlasValue = szkola.IloscKlas.ToString();
+            iloscKlasLabel.Content = iloscKlasLabel.Content + " " + iloscKlasValue;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DodajKlaseWindow dodajKlaseWindow = new DodajKlaseWindow(szkola);
+            dodajKlaseWindow.Show();
+            iloscKlasLabel.Content = "Ilość klas: " + " " + szkola.IloscKlas;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UsunKlaseWindow usunKlaseWindow = new UsunKlaseWindow(szkola);
+            usunKlaseWindow.Show();
+            iloscKlasLabel.Content = "Ilość klas: " + " " + szkola.IloscKlas;
         }
     }
 }
