@@ -36,7 +36,6 @@ namespace Projekt_interfejs_Jezyk_UML
             if(klasaListBox.SelectedIndex > -1)
             {
                 numerKlasy = klasaListBox.SelectedItem.ToString();
-                Debug.WriteLine(numerKlasy);
             }
         }
 

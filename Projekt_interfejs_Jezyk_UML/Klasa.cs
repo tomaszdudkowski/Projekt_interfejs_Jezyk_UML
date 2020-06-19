@@ -28,6 +28,10 @@ namespace Projekt_interfejs_Jezyk_UML
         }
 
         private List<Uczen> listaUczniow = new List<Uczen>();
+        public List<Uczen> ListaUczniow
+        {
+            get { return listaUczniow; }
+        }
 
         /// <summary>
         /// Dodawanie ucznia do listy uczniów klasy.
@@ -49,7 +53,7 @@ namespace Projekt_interfejs_Jezyk_UML
         {
             foreach (var uczen in listaUczniow)
             {
-                if (uczen.Klasa.NumerKlasy == numerKlasy)
+                if (uczen.NumerKlasy == numerKlasy)
                 {
                     listaUczniow.Remove(uczen);
                 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projekt_interfejs_Jezyk_UML
 {
-    abstract class PracownikOswiaty
+    public abstract class PracownikOswiaty
     {
         private string imie;
         public string Imie

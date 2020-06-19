@@ -14,21 +14,21 @@
                     <Button Content="Usuń klasę" HorizontalAlignment="Left" Margin="132,70,0,0" VerticalAlignment="Top" Width="73" Click="Button_Click_1"/>
                     <Label Content="Szkoła" HorizontalAlignment="Left" Margin="147,14,0,0" VerticalAlignment="Top"/>
                     <Label Content="Dyrektor" HorizontalAlignment="Left" Margin="420,13,0,0" VerticalAlignment="Top"/>
-                    <RichTextBox Margin="349,44,406,305" Width="198" Height="149.08">
+                    <RichTextBox x:Name="rozporzadzenieRichTextBox" Margin="349,44,406,305" Width="198" Height="149.08">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text=""/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Button Content="Wydaj rozporządzenie" HorizontalAlignment="Left" Margin="389,210,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="rozporzadzenieButton" Content="Wydaj rozporządzenie" HorizontalAlignment="Left" Margin="389,210,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
                     <GroupBox Header="Stan szkoły" Margin="349,246,403,138" Width="201" Height="114.08">
                         <StackPanel Width="189" Height="79">
-                            <RadioButton Content="Otwórz szkołę" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,8,0,0"/>
-                            <RadioButton Content="Zamknij szkołę" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,8,0,0"/>
+                            <RadioButton x:Name="otworzSzkoleRadio" Content="Otwórz szkołę" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,8,0,0" Checked="RadioButton_Checked"/>
+                            <RadioButton x:Name="zamknijSzkoleRadio" Content="Zamknij szkołę" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,8,0,0" Checked="RadioButton_Checked_1"/>
                         </StackPanel>
                     </GroupBox>
-                    <Button Content="Zrekrutuj ucznia" HorizontalAlignment="Left" Margin="395,378,0,0" VerticalAlignment="Top" Width="110"/>
+                    <Button Content="Zrekrutuj ucznia" HorizontalAlignment="Left" Margin="395,378,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click_3"/>
                     <Button Content="Oblicz wypłatę" HorizontalAlignment="Left" Margin="395,415,0,0" VerticalAlignment="Top" Width="110"/>
                     <Label Content="Wicedyrektor" HorizontalAlignment="Left" Margin="714,21,0,0" VerticalAlignment="Top"/>
                     <Button Content="Utwórz zastępstwo" HorizontalAlignment="Left" Margin="698,65,0,0" VerticalAlignment="Top" Width="130"/>
@@ -38,12 +38,12 @@
             </TabItem>
             <TabItem Header="Zarządzaj klasami">
                 <Grid Background="#FFF">
-                    <ComboBox HorizontalAlignment="Left" Margin="83,69,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="klasyZarzadzajComboBox" HorizontalAlignment="Left" Margin="83,69,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
                     <Label Content="Wybierz klasę" HorizontalAlignment="Left" Margin="102,38,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Dodaj ucznia" HorizontalAlignment="Left" Margin="83,160,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Dodaj ucznia" HorizontalAlignment="Left" Margin="83,160,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_4"/>
                     <Button Content="Usuń ucznia" HorizontalAlignment="Left" Margin="83,193,0,0" VerticalAlignment="Top" Width="120"/>
                     <Label Content="Obsługa uczniów klasy" HorizontalAlignment="Left" Margin="78,129,0,0" VerticalAlignment="Top"/>
-                    <ListBox Margin="306,69,438,226"/>
+                    <ListBox x:Name="listaUczniowListBox" Margin="306,69,438,226"/>
                     <Label Content="Lista uczniów" HorizontalAlignment="Left" Margin="370,38,0,0" VerticalAlignment="Top"/>
                     <Label Content="Ilość uczniów w klasie:" HorizontalAlignment="Left" Margin="594,69,0,0" VerticalAlignment="Top"/>
                     <Label Content="Wychowawca klasy:" HorizontalAlignment="Left" Margin="594,111,0,0" VerticalAlignment="Top"/>

@@ -20,18 +20,18 @@ namespace Projekt_interfejs_Jezyk_UML
             set { nazwisko = value; }
         }
 
-        private Klasa klasa;
-        public Klasa Klasa
+        private int numerKlasy;
+        public int NumerKlasy
         {
-            get { return klasa; }
-            set { klasa = value; }
+            get { return numerKlasy; }
+            set { numerKlasy = value; }
         }
 
-        private int numerID;
+        static private int numerID = 1000;
         public int NumerID
                 {
             get { return numerID; }
-            set { numerID = value; }
+            set { numerID++; }
         }
 
     }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Projekt_interfejs_Jezyk_UML
 {
-    class Dyrektor : PracownikOswiaty
+    public class Dyrektor : PracownikOswiaty
     {
         /// <summary>
         /// Properties Dostępność dyrektora
